@@ -6,8 +6,7 @@ const mongoose = require('mongoose');
 
 var doctorRouter = require('./routes/doctor');
 var patientRouter = require('./routes/patient');
-// var productsRouter = require('./routes/produsts');
-// var orderRouter = require('./routes/order');
+var aggregationRouter = require('./routes/aggregation');
 
 var app = express();
 
@@ -16,7 +15,7 @@ var app = express();
 app.use(logger('dev'));
 
 //connect to DB
-mongoose.connect('mongodb://localhost:27017/E-clinic', (err) => {
+mongoose.connect('mongodb+srv://elsheshnagy:elsheshnagy@mohamed.tetkz32.mongodb.net/E-clinic?retryWrites=true&w=majority', (err) => {
   if (err) {
     console.log(err);
   } else {
@@ -31,8 +30,7 @@ app.use(express.json());
 
 app.use('/doctor', doctorRouter);
 app.use('/patient', patientRouter);
-// app.use('/products', productsRouter);
-// app.use('/order', orderRouter);
+app.use('/aggregation', aggregationRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
