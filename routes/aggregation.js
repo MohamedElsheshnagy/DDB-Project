@@ -3,7 +3,7 @@ var router = express.Router();
 const control = require('../controllers/aggregation');
 
 
-//add order
+
 router.post('/addAggregation', control.addAggregation);
 router.get('/getAggregation', control.addField);
 router.get('/groupAggregation', control.group);

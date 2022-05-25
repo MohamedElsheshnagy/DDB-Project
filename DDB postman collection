@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "0bf5c9f9-9d77-4bf2-ad6e-5ed7fbd6011a",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19885185"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/doctor/getDoctor",
+			"protocolProfileBehavior": {
+				"followOriginalHttpMethod": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"doctor_name\": \"khaled\",\r\n    \"specialization\": \"haert\",\r\n    \"phone_number\": \"572952\",\r\n    \"address\": \"menouf\",\r\n    \"patient\":[\r\n        \"123456789101\",\r\n        \"014785200369\",\r\n        \"121212121212\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/doctor/addDoctor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"doctor",
+						"addDoctor"
+					]
+				},
+				"description": "Get"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/doctor/getDoctor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/doctor/getDoctor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"doctor",
+						"getDoctor"
+					]
+				},
+				"description": "Get Doctor"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/doctor/updateDoctor",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"doctor_name\": \"anwer\",\r\n    \"specialization\": \"heart\",\r\n    \"phone_number\": \"010180\",\r\n    \"address\": \"shibi\",\r\n    \"patient\": [\r\n        \"147147147147\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/doctor/updateDoctor?628cbaa4f146b91cd16360b3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"doctor",
+						"updateDoctor"
+					],
+					"query": [
+						{
+							"key": "628cbaa4f146b91cd16360b3",
+							"value": null
+						}
+					]
+				},
+				"description": "Update"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/doctor/deleteDoctor",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"doctor_name\": \"khaled\",\r\n    \"specialization\": \"haert\",\r\n    \"phone_number\": \"572952\",\r\n    \"address\": \"menouf\",\r\n    \"patient\":[\r\n        \"123456789101\",\r\n        \"014785200369\",\r\n        \"121212121212\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/doctor/deleteDoctor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"doctor",
+						"deleteDoctor"
+					]
+				},
+				"description": "Delete\r\n"
+			},
+			"response": []
+		}
+	]
+}
